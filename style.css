@@ -4,7 +4,9 @@
 /* Cream Color */
 /* EEEED2 */
 
-
+.userform{
+    margin-left: 1rem;
+}
 .square{
     background-color: beige;
     height:70px;
