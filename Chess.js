@@ -28,6 +28,7 @@ for (const i of arrayOfFiles){
     fileNumber--;
 }
 
+
 //takes input and moves the image
 
 document.getElementById('userForm').addEventListener('submit', function(event) {
@@ -40,11 +41,17 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
     var img = document.getElementById(userInput_value)
     var img2 = document.getElementById(userInput2_value)
-
-    img2.append(img);
-
-    console.log(img2)
-
+    
+    if (userInput2_value.length>2){
+        img2.replaceWith(img);
+        img.setAttribute("id", userInput_value.charAt(0)+userInput2_value.charAt(1)+userInput2_value.charAt(2))
+    }
+    else{
+        img2.append(img);
+        img.setAttribute("id", userInput_value.charAt(0)+userInput2_value)
+    }
+    console.log(img)
+    
     
 
     document.getElementById('userInput').value = '';
