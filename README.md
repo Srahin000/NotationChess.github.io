@@ -1,1 +1,0 @@
-# NotationChess.github.io
